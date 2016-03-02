@@ -40,15 +40,15 @@ ha proporcionado algún parametro, ni si ese parámetro es un número. Se pide:
   
 a) Sin parametros
 
-  *java Log1*
+&nbsp*java Log1*
 
 b) Poniendo un parametro no numérico
 
-  *java Log1 pepe*
+&nbsp*java Log1 pepe*
 
 c) Poniendo un parametro numérico
 
-  *java Log1 30*
+&nbsp*java Log1 30*
 
 Anote las excepciones que se lanzan en cada caso (si se lanzan)
 * Modificar el codigo de main para que capture las excepciones producidas y muestre los errores correspondientes en cada caso:
