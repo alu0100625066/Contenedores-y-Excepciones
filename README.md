@@ -51,7 +51,7 @@ try {
 ```
 Pruebe de nuevo el programa igual que en el caso anterior comprobando que las excepciones son capturadas y tratadas. Pretendemos trabajar ahora con las excepciones del metodo **Math.log** y no con las del *main*. Escriba un nuevo programa **Log2.java** similar al anterior, de modo que en la función que calcula el logaritmo se compruebe si el valor introducido es menor o igual que 0, ya que para estos valores la funcion logaritmo no está definida. Se pide: 
 + Buscar entre las excepciones de Java la mas adecuada para lanzar en este caso, que indique que a un metodo se le ha pasado un 
-argumento ilegal. **(Pista: Buscar entre las clases derivadas de *Exception*. En este caso la mas adecuada se encuentra entre las derivadas de *RuntimeException*)**.
+argumento ilegal. (Pista: Buscar entre las clases derivadas de *Exception*. En este caso la mas adecuada se encuentra entre las derivadas de *RuntimeException*).
 
 + Una vez elegida la excepcion adecuada, añadir código (en el método logaritmo) para que en el caso de haber introducido un parametro incorrecto se lance dicha excepción. 
 ```java
