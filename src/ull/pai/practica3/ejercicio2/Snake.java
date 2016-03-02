@@ -12,46 +12,50 @@ package ull.pai.practica3.ejercicio2;
  */
 public class Snake {
     
-    /* This class attribute was used on an older version or another way to solve
-     * the problem.
-     *  private static int snakeNum = 0;      
-    */
-    
+    /** The static attribute that keeps tracking of the number of snakes. */
+    private static int snakeNum = 0;
     /** The snake id. */
     private int snakeId;
     
-    /* This was the old version of the constructor, we had to make a variable
-     * to help us get the actual number of snakes to assign the following                                  
-     * identification number to the new snake and to update the current number of 
-     * snakes.                                     
-     *
+    /**
+     * Default constructor of Snake, update the number of snakes and give a new 
+     * id to the snake that is equal to the number of snakes.
+     */
     public Snake() {
         int actualStatus = getSnakeNum();
         actualStatus++;
         setSnakeId(actualStatus);
         setSnakeNum(actualStatus);
     }
-    */
     
     /**
      * Instantiates a new snake.
      *
-     * @param snakeId the snake id is send from the main file being a random id.
+     * @param snakeId the snake id is sent from the main file being a random id.
      */
     public Snake(int snakeId) {
+        int actualStatus = getSnakeNum();
+        actualStatus++;
         setSnakeId(snakeId);
+        setSnakeNum(actualStatus);
     }
 
-    /* This where the getter and setter methods for the old version attribute
+    /**
+     * Gets the total number of snakes.
+     *
+     * @return the total number of snakes
+     */
     public static int getSnakeNum() {
         return snakeNum;
     }
 
+    /**
+     * Sets the the total number of snakes.
+     */
     public static void setSnakeNum(int snakeNum) {
         Snake.snakeNum = snakeNum;
     }
-    */
-
+    
     /**
      * Gets the snake id.
      *
@@ -71,7 +75,7 @@ public class Snake {
     }
     
     /**
-     * This metod is used to print in console the identification number of
+     * This method is used to print in console the identification number of
      * the snake that calls it.
      */
     public void slither() {

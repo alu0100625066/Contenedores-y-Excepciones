@@ -1,4 +1,4 @@
-package ull.pai.practica3.ejercicio1;
+package ull.pai.practica3.ejercicio3;
 
 /**
  * @author      Simón Fuertes Sánchez
