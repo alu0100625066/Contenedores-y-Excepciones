@@ -37,12 +37,16 @@ class Log1 {
 toma un numero como parámetro, y como salida muestra el logaritmo de dicho número. Sin embargo, en ningún momento comprueba si se 
 ha proporcionado algún parametro, ni si ese parámetro es un número. Se pide: 
 * Compilar el programa y ejecutadlo de tres formas distintas:
-  a) Sin parametros
+  
+a) Sin parametros
   *java Log1*
-  b) Poniendo un parametro no numérico
+
+b) Poniendo un parametro no numérico
   *java Log1 pepe*
-  c) Poniendo un parametro numérico
+
+c) Poniendo un parametro numérico
   *java Log1 30*
+
 Anote las excepciones que se lanzan en cada caso (si se lanzan)
 * Modificar el codigo de main para que capture las excepciones producidas y muestre los errores correspondientes en cada caso:
 Para comprobar si no hay parametros se capturará una excepción de tipo *ArrayIndexOutOfBoundsException* (para ver si el array de 
