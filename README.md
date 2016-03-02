@@ -15,10 +15,10 @@ Escriba una aplicacion que cuente el número de ocurrencias de cada palabra dent
 
 ### * Ejercicio 5: Excepciones
 El siguiente programa **Log1.java**:
-```
-**class** Log1 {
-  **public static void** main ( String args [ ] ) {
-    **double** aDouble = Double . parseDouble ( args [ 0 ] ) ;
+```java
+class Log1 {
+  public static void main ( String args [ ] ) {
+    double aDouble = Double . parseDouble ( args [ 0 ] ) ;
     System . out . println ( Math . log ( aDouble ) ) ;
   }
 }
@@ -38,14 +38,14 @@ c) Poniendo un parametro numérico
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*java Log1 30*
 
-···Anote las excepciones que se lanzan en cada caso (si se lanzan)
+   Anote las excepciones que se lanzan en cada caso (si se lanzan)
 * Modificar el codigo de main para que capture las excepciones producidas y muestre los errores correspondientes en cada caso: Para comprobar si no hay parametros se capturará una excepción de tipo *ArrayIndexOutOfBoundsException* (para ver si el array de *String* que se pasa en el *main* tiene algun elemento). Para comprobar si el parametro es numérico, se capturara una excepción de tipo *NumberFormatException*. Así, tendremos en el *main* algo como:
-```
-**try** {
+```java
+try {
 // Tomar parametro y asignarlo a un double
-} **catch** ( ArrayIndexOutOfBoundsException e1 ) {
+} catch ( ArrayIndexOutOfBoundsException e1 ) {
 // Codigo a realizar si no hay parametros
-} **catch** ( NumberFormatException e2 ) {
+} catch ( NumberFormatException e2 ) {
 // Codigo a realizar con parametro no numerico
 }
 ```
@@ -54,29 +54,29 @@ Pruebe de nuevo el programa igual que en el caso anterior comprobando que las ex
 argumento ilegal. **(Pista: Buscar entre las clases derivadas de *Exception*. En este caso la mas adecuada se encuentra entre las derivadas de *RuntimeException*)**.
 
 + Una vez elegida la excepcion adecuada, añadir código (en el método logaritmo) para que en el caso de haber introducido un parametro incorrecto se lance dicha excepción. 
-```
-**throw new** . . . // excepcion elegida
+```java
+throw new . . . // excepcion elegida
 ```
 
-···Probar el programa para comprobar el efecto que tiene el lanzamiento de la excepcion.
+   Probar el programa para comprobar el efecto que tiene el lanzamiento de la excepcion.
 
 + Al no ser una excepcion del tipo checked no hará falta que la capturemos ni que declaremos que puede ser lanzada. Vamos a crear
 nuestro propio tipo de excepcion derivada de *Exception* (de tipo *checked*) para ser lanzada en caso de introducir un valor no valido 
 como parámetro. La excepción se llamará *WrongParameterException* y tendra la siguiente forma: 
-```
-**public class** WrongParameterException **extends** Exception {
-  **public** WrongParameterException ( String msg ) {
-    **super**( msg ) ;
+```java
+public class WrongParameterException **extends** Exception {
+  public WrongParameterException ( String msg ) {
+    super( msg ) ;
   }
 }
 ```
 
-···Deberemos lanzarla en lugar de la escogida en el punto anterior.
-```
-**throw new** WrongParameterException ( . . . ) ;
+   Deberemos lanzarla en lugar de la escogida en el punto anterior.
+```java
+throw new WrongParameterException ( . . . ) ;
 ```
 
-···Intentar compilar el programa y observar los errores que aparecen. ¿Por que ocurre esto? Añadir los elementos necesarios al código 
+   Intentar compilar el programa y observar los errores que aparecen. ¿Por que ocurre esto? Añadir los elementos necesarios al código 
 para que compile y probarlo.
 
 + Por el momento controlamos que no se pase un numero negativo como entrada. ¿Pero que ocurre si la entrada no es un número válido?
