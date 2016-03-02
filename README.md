@@ -39,12 +39,15 @@ ha proporcionado algún parametro, ni si ese parámetro es un número. Se pide:
 * Compilar el programa y ejecutadlo de tres formas distintas:
   
 a) Sin parametros
+
   *java Log1*
 
 b) Poniendo un parametro no numérico
+
   *java Log1 pepe*
 
 c) Poniendo un parametro numérico
+
   *java Log1 30*
 
 Anote las excepciones que se lanzan en cada caso (si se lanzan)
